@@ -28,7 +28,7 @@
                 
                 <div class="content-wrapper"> 
                     <div class="content"> <!--Start here your content for the page-->
-                        <table id="myTable" class="table table-hover table-product" style="width:100%">
+                        <table id="example" class="table table-hover table-product" style="width:100%">
                             <thead>
                               <tr>
                                 <th>Image</th>
@@ -88,7 +88,6 @@
         <script src="{% static 'plugins/simplebar/simplebar.min.js' %}"></script>
         <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
         <script src="{% static 'plugins/apexcharts/apexcharts.js' %}"></script>
-        <script src="{% static 'plugins/DataTables/DataTables-1.10.18/js/jquery.dataTables.min.js' %}"></script>
         <script src="{% static 'plugins/jvectormap/jquery-jvectormap-2.0.3.min.js' %}"></script>
         <script src="{% static 'plugins/jvectormap/jquery-jvectormap-world-mill.js' %}"></script>
         <script src="{% static 'plugins/jvectormap/jquery-jvectormap-us-aea.js' %}"></script>
@@ -104,5 +103,10 @@
 </html>
 
 <script>
-    $
+  $( document ).ready(function() {
+    console.log( "ready!" );
+    $('#example').DataTable( {
+      responsive: true
+  } );
+  });
 </script>
