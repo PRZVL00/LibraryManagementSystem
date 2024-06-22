@@ -6,3 +6,9 @@ def login(request):
 
 def dashboard(request):
     return render(request, 'DashboardPage/dashboard.html', {})
+
+def transactionhistory(request):
+    return render(request, 'TransactionHistoryPage/transactionhistory.html', {})
+
+def timeintimeout(request):
+    return render(request, 'TimeinTimeoutPage/timeintimeout.html', {})
