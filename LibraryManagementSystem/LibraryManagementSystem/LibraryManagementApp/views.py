@@ -7,6 +7,9 @@ def login(request):
 def dashboard(request):
     return render(request, 'DashboardPage/dashboard.html', {})
 
+def bookbrowsing(request):
+    return render(request, 'BookBrowsingPage/bookbrowsing.html', {})
+
 def transactionhistory(request):
     return render(request, 'TransactionHistoryPage/transactionhistory.html', {})
 

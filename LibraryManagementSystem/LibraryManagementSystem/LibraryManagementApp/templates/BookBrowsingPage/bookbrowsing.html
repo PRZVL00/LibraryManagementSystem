@@ -1,0 +1,183 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mono - Responsive Admin & Dashboard Template</title>
+    <!-- theme meta -->
+    <meta name="theme-name" content="mono" />
+
+    <!--Put all CSS refference here-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Karla:400,700|Roboto"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'plugins/material/css/materialdesignicons.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'plugins/simplebar/simplebar.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      href="{% static 'plugins/Datatables/datatables.min.css' %}"
+      rel="stylesheet"
+    />
+    <link
+      id="main-css-href"
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+    />
+    <link 
+        href="{% static 'images/favicon.png' %}" 
+        rel="shortcut icon" 
+    />
+    <link 
+        href="{% static 'plugins/nprogress/nprogress.css' %}" 
+        rel="stylesheet" 
+    />
+    <link 
+        href="{% static 'plugins/prism/prism.css' %}" 
+        rel="stylesheet" 
+    />
+
+  </head>
+  <body class="navbar-fixed sidebar-fixed" id="body">
+    <div class="wrapper">
+      <div id="Sidebar">
+        {% include '_sideNav.html'%}
+        <!-- this is partial view. we can refference it through out so that we dont need it to type always-->
+      </div>
+      <div class="page-wrapper">
+        {% include '_header.html'%}
+        <!-- this is partial view. we can refference it through out so that we dont need it to type always-->
+
+        <div class="content-wrapper">
+          <div class="content">
+            <!--Start here your content for the page-->
+            <div class="container text-center mb-3">
+              <div class="input-group mb-3">
+                <input 
+                  type="text" 
+                  class="form-control" 
+                  placeholder="Search for...">
+                <div 
+                  class="input-group-prepend">
+                  <button 
+                    class="btn btn-secondary" 
+                    type="button">Search</button>
+                </div>
+              </div
+              >
+              <div class="dropdown d-inline-block mb-1">
+                <button 
+                  class="btn btn-outline-primary dropdown-toggle btn-sm" 
+                  type="button" id="dropdownMenuButton" 
+                  data-toggle="dropdown"
+                  aria-haspopup="true" 
+                  aria-expanded="false" 
+                  data-display="static">
+                  Category
+                </button>
+                <div 
+                  class="dropdown-menu" 
+                  aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div
+              >
+              <div class="dropdown d-inline-block mb-1">
+                <button 
+                  class="btn btn-outline-primary dropdown-toggle btn-sm" 
+                  type="button" id="dropdownMenuButton" 
+                  data-toggle="dropdown"
+                  aria-haspopup="true" 
+                  aria-expanded="false" 
+                  data-display="static">
+                  Category
+                </button>
+                <div 
+                  class="dropdown-menu" 
+                  aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div
+              >
+              <div class="dropdown d-inline-block mb-1">
+                <button 
+                  class="btn btn-outline-primary dropdown-toggle btn-sm" 
+                  type="button" id="dropdownMenuButton" 
+                  data-toggle="dropdown"
+                  aria-haspopup="true" 
+                  aria-expanded="false" 
+                  data-display="static">
+                  Category
+                </button>
+                <div 
+                  class="dropdown-menu" 
+                  aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div
+            >
+            <div class="row">
+                <div class="col-lg-6 col-xl-3">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                        <img 
+                          class="mb-4 card-img" 
+                          img src="{% static "images/elements/cc1c.jpg" %}" 
+                          alt="Mono" 
+                          />
+                        <h5 class="card-title mb-1">Book Title</h5>
+                        <p class="card-text">Year</p>
+                        <p class="card-text">Author</p>
+                        <p class="card-text">ISNB</p>
+                        <p class="card-text">Available Qty. </p>
+                        <div class="container mt-3 text-center">
+                            <button type="button" class="m-2 btn btn-outline-info btn-pill btn-sm">More Info</button>
+                            <button type="button" class="m-2 btn btn-outline-danger btn-pill btn-sm">Add to Bag</button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        {% include "_footer.html" %}
+        <!-- this is partial view. we can refference it through out so that we dont need it to type always-->
+      </div>
+    </div>
+
+    <!-- Put all js refference here-->
+    <script src="{% static 'plugins/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'plugins/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'plugins/simplebar/simplebar.min.js' %}"></script>
+    <script src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+    <script src="{% static 'plugins/apexcharts/apexcharts.js' %}"></script>
+    <script src="{% static 'plugins/jvectormap/jquery-jvectormap-2.0.3.min.js' %}"></script>
+    <script src="{% static 'plugins/jvectormap/jquery-jvectormap-world-mill.js' %}"></script>
+    <script src="{% static 'plugins/jvectormap/jquery-jvectormap-us-aea.js' %}"></script>
+    <script src="{% static 'plugins/daterangepicker/moment.min.js' %}"></script>
+    <script src="{% static 'plugins/daterangepicker/daterangepicker.js' %}"></script>
+    <script src="{% static 'plugins/Datatables/datatables.min.js' %}"></script>
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="{% static 'plugins/toaster/toastr.min.js' %}"></script>
+    <script src="{% static 'js/mono.js' %}"></script>
+    <script src="{% static 'js/chart.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'plugins/nprogress/nprogress.js' %}"></script>
+  </body>
+</html>
