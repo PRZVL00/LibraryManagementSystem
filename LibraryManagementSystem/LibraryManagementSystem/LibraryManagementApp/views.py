@@ -12,3 +12,6 @@ def transactionhistory(request):
 
 def timeintimeout(request):
     return render(request, 'TimeinTimeoutPage/timeintimeout.html', {})
+
+def usermanagement(request):
+    return render(request, 'UserManagementPage/usermanagement.html', {})
