@@ -53,7 +53,7 @@
                                                     <label class="custom-control-label" for="customCheck2">Remember me</label>
                                                 </div>
 
-                                                <a class="text-color" href="#"> Forgot password? </a>
+                                                <a class="text-color" href="#" id="passwordresetButton"> Forgot password? </a>
                                             </div>
 
                                             <button type="button" class="btn btn-primary btn-pill mb-4" id="siginButton">Sign In</button>
@@ -82,6 +82,11 @@
 		// Event listener for button click
 		$("#siginButton").click(function() {
 			window.location.href = "{% url 'dashboard' %}";
+			// Add any other actions you want to happen on button click
+		});
+
+        $("#passwordresetButton").click(function() {
+			window.location.href = "{% url 'passwordrecovery' %}";
 			// Add any other actions you want to happen on button click
 		});
 	});
